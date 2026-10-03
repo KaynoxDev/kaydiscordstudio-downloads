@@ -36,6 +36,20 @@ Toutes les versions publiées sont disponibles dans l’onglet **[Releases](../.
 
 ---
 
+## 🩺 L’application ne s’affiche pas correctement ?
+
+Cette version affiche toujours quelque chose à l’écran : un démarrage en cours, puis — si la licence de ton ordinateur ne peut pas être lue — un message d’erreur avec un bouton **« Réessayer »**.
+
+Si un message s’affiche ou si la fenêtre reste noire, joins à ton signalement le fichier :
+
+```
+%APPDATA%\Kay Discord Studio\kds-debug.log
+```
+
+(colle ce chemin dans la barre d’adresse de l’Explorateur Windows). Il contient le détail technique du démarrage et permet de comprendre ce qui s’est passé sur ton ordinateur.
+
+---
+
 ## 💬 Besoin d’aide ou envie de signaler un bug ?
 
 Rends-toi sur le serveur Discord officiel de **Kay Discord Studio** :
