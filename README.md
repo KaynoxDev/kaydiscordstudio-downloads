@@ -4,22 +4,55 @@ Crée ton propre bot Discord **sans écrire une ligne de code**, en assemblant d
 
 ---
 
-## 📥 Télécharger la bêta (Windows 10 / 11 · 64 bits)
+## 📥 Télécharger
 
-Version actuelle : **v0.1.0-beta.1**
+Les liens téléchargent toujours **la dernière version**.
 
-👉 **[Télécharger Kay-Discord-Studio-Setup-0.1.0-beta.1.exe](../../releases/download/v0.1.0-beta.1/Kay-Discord-Studio-Setup-0.1.0-beta.1.exe)**
+| Système | Téléchargement |
+|---|---|
+| 🪟 **Windows** 10 / 11 (64 bits) | **[Kay-Discord-Studio-Setup.exe](../../releases/latest/download/Kay-Discord-Studio-Setup.exe)** |
+| 🍎 **macOS** Apple Silicon (M1 à M4) | **[Kay-Discord-Studio-mac-arm64.dmg](../../releases/latest/download/Kay-Discord-Studio-mac-arm64.dmg)** |
+| 🍎 **macOS** Intel | [Kay-Discord-Studio-mac-x64.dmg](../../releases/latest/download/Kay-Discord-Studio-mac-x64.dmg) |
+| 🐧 **Linux** Ubuntu, Debian, Mint… | **[Kay-Discord-Studio-linux-amd64.deb](../../releases/latest/download/Kay-Discord-Studio-linux-amd64.deb)** |
+| 🐧 **Linux** autres distributions | [Kay-Discord-Studio-linux-x86_64.AppImage](../../releases/latest/download/Kay-Discord-Studio-linux-x86_64.AppImage) |
 
-Toutes les versions publiées sont disponibles dans l’onglet **[Releases](../../releases)** de ce dépôt.
+Toutes les versions publiées sont dans l’onglet **[Releases](../../releases)**.
 
 ---
 
 ## 🚀 Installation et premier lancement
 
-1. Télécharge le fichier **`Kay-Discord-Studio-Setup-<version>.exe`** depuis la [dernière Release](../../releases/latest).
-2. Lance l’installateur et choisis le dossier d’installation.
-   - *Note Windows SmartScreen :* l’application étant en version bêta non signée numériquement, Windows peut afficher un écran de protection au premier lancement. Clique sur **« Informations complémentaires »** puis **« Exécuter quand même »**.
-3. Au premier lancement, colle ta **clé bêta** obtenue sur le serveur Discord communautaire (salon `#obtenir-la-bêta`).
+Au premier lancement, colle ta **clé bêta** obtenue sur le serveur Discord communautaire (salon `#obtenir-la-bêta`).
+
+### 🪟 Windows
+
+1. Lance **`Kay-Discord-Studio-Setup.exe`** : pas besoin de droits administrateur.
+2. *SmartScreen :* tant que l’application n’est pas signée, Windows peut afficher « Windows a protégé votre ordinateur ». Clique sur **« Informations complémentaires »** puis **« Exécuter quand même »**.
+
+### 🍎 macOS
+
+1. Ouvre le **.dmg** et glisse **Kay Discord Studio** dans **Applications**.
+2. *Gatekeeper :* tant que l’application n’est pas notarisée par Apple, macOS refuse la première ouverture.
+   Ouvre **Réglages Système → Confidentialité et sécurité**, descends jusqu’à « Kay Discord Studio a été bloqué » et clique sur **« Ouvrir quand même »**.
+   Si macOS indique que l’application est « endommagée », lance une fois dans le Terminal :
+   ```bash
+   xattr -cr "/Applications/Kay Discord Studio.app"
+   ```
+
+### 🐧 Linux
+
+- **.deb** (Ubuntu, Debian, Mint, Pop!_OS…) :
+  ```bash
+  sudo apt install ./Kay-Discord-Studio-linux-amd64.deb
+  ```
+  L’application apparaît ensuite dans le menu des applications.
+- **AppImage** (toutes distributions) :
+  ```bash
+  chmod +x Kay-Discord-Studio-linux-x86_64.AppImage
+  ./Kay-Discord-Studio-linux-x86_64.AppImage
+  ```
+  Sur Ubuntu 24.04 et plus récent, si rien ne s’ouvre, ajoute `--no-sandbox` (ou préfère le .deb).
+- Pour garder ton token chiffré, un trousseau doit être actif (GNOME Keyring ou KWallet, présents par défaut sur les bureaux courants).
 
 ---
 
@@ -42,11 +75,13 @@ Cette version affiche toujours quelque chose à l’écran : un démarrage en co
 
 Si un message s’affiche ou si la fenêtre reste noire, joins à ton signalement le fichier :
 
-```
-%APPDATA%\Kay Discord Studio\kds-debug.log
-```
+| Système | Fichier |
+|---|---|
+| Windows | `%APPDATA%\Kay Discord Studio\kds-debug.log` (à coller dans la barre d’adresse de l’Explorateur) |
+| macOS | `~/Library/Application Support/Kay Discord Studio/kds-debug.log` |
+| Linux | `~/.config/Kay Discord Studio/kds-debug.log` |
 
-(colle ce chemin dans la barre d’adresse de l’Explorateur Windows). Il contient le détail technique du démarrage et permet de comprendre ce qui s’est passé sur ton ordinateur.
+Il contient le détail technique du démarrage et permet de comprendre ce qui s’est passé sur ton ordinateur.
 
 ---
 
