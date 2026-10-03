@@ -6,7 +6,9 @@ Crée ton propre bot Discord **sans écrire une ligne de code**, en assemblant d
 
 ## 📥 Télécharger la bêta (Windows 10 / 11 · 64 bits)
 
-👉 **[Télécharger la dernière version (Kay-Discord-Studio-Setup.exe)](../../releases/latest)**
+Version actuelle : **v0.1.0-beta.1**
+
+👉 **[Télécharger Kay-Discord-Studio-Setup-0.1.0-beta.1.exe](../../releases/download/v0.1.0-beta.1/Kay-Discord-Studio-Setup-0.1.0-beta.1.exe)**
 
 Toutes les versions publiées sont disponibles dans l’onglet **[Releases](../../releases)** de ce dépôt.
 
